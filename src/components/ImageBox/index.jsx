@@ -1,12 +1,11 @@
 import "./ImageBox.scss";
 
-function ImageBox() {
+function ImageBox({ memeData }) {
   return (
     <div className="image-box">
-      {/* meme img */}
-      <h2 className="top-text">Top Text</h2>
-      <img src="/assets/meme-example.png" alt="meme-img" />
-      <h2 className="bottom-text">Bottom Text</h2>
+      <h2 className="top-text">{memeData.topText}</h2>
+      <img src={memeData.memeUrl} alt="meme-img" />
+      <h2 className="bottom-text">{memeData.bottomText}</h2>
     </div>
   );
 }
